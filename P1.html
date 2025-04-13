@@ -1,0 +1,309 @@
+<!--Nida Ashraf 22008105006-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Most Popular Dresses - زن</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ad0320;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px;
+      margin-left: 250px;
+    }
+
+    main h1 {
+      font-size: 2.5rem;
+      color: #ad0320;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    section.category-group {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    article.product-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 15px;
+    }
+
+    article.product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    article.product-card h2 {
+      color: #ad0320;
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    article.product-card p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      text-decoration: none;
+      background-color: #ad0320;
+      padding: 12px 25px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #ad0320;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    #menu-toggle,
+    #ethnic-toggle,
+    #casual-toggle,
+    #jewellery-toggle,
+    #bohemian-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 1100;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger div {
+      background-color: #333;
+      height: 4px;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: left 0.3s ease-in-out;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    #menu-toggle:checked ~ .side-menu {
+      left: 0;
+    }
+
+    .side-menu h2 {
+      font-size: 1.4rem;
+      color: #ad0320;
+      margin-bottom: 15px;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .side-menu li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .side-menu li a,
+    .side-menu li label {
+      color: #333;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .sub-menu {
+      display: none;
+      margin-left: 15px;
+      margin-top: 5px;
+    }
+
+    #ethnic-toggle:checked + .sub-menu,
+    #casual-toggle:checked + .sub-menu,
+    #jewellery-toggle:checked + .sub-menu,
+    #bohemian-toggle:checked + .sub-menu {
+      display: block;
+    }
+
+    .side-menu li a:hover {
+      color: #46000c;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+
+      main h1 {
+        font-size: 2rem;
+      }
+
+      section.category-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      article.product-card {
+        width: 90%;
+        max-width: 300px;
+      }
+
+      .side-menu {
+        width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="pro.html">Home</a>
+      <a href="p1.html">Most Popular Dresses</a>
+    </nav>
+  </header>
+
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+
+  <aside class="side-menu">
+    <h2>Categories</h2>
+    <ul>
+      <li class="menu-item">
+        <label for="ethnic-toggle">Ethnic</label>
+        <input type="checkbox" id="ethnic-toggle" />
+        <ul class="sub-menu">
+          <li><a href="ethn ic1pc.html">1PC</a></li>
+          <li><a href="ethnic 2 pc.html">2PC</a></li>
+          <li><a href="ethnic 3pc.html">3PC</a></li>
+        </ul>
+      </li>
+      
+      <li class="menu-item">
+        <label for="jewellery-toggle">Jewellery</label>
+        <input type="checkbox" id="jewellery-toggle" />
+        <ul class="sub-menu">
+          <li><a href="jumky.html">Jhumky</a></li>
+          <li><a href="nosepins.html">Nose Pins</a></li>
+          <li><a href="rings.html">Rings</a></li>
+          <li><a href="bangles.html">Bangles</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <label for="bohemian-toggle">Bohemian</label>
+        <input type="checkbox" id="bohemian-toggle" />
+        <ul class="sub-menu">
+          <li><a href="maxi dresses.html">Maxi Dresses</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <main>
+    <h1>Most Popular Dresses</h1>
+
+    <section class="category-group">
+      <article class="product-card">
+        <img src="E1.png" alt="Embroidered Dress" />
+        <h2>Embroidered Dress</h2>
+        <p>Elegantly designed with floral embroidery, perfect for evening wear.</p>
+        <a href="floral.html" class="button">Shop Now</a>
+      </article>
+    </section>
+
+    <section class="category-group">
+      <article class="product-card">
+        <img src="RED anarkali.png" alt="Traditional Anarkali" />
+        <h2>Traditional Anarkali</h2>
+        <p>Classic design that blends tradition and modern style for every occasion.</p>
+        <a href="anarkali.html" class="button">Shop Now</a>
+      </article>
+
+      <article class="product-card">
+        <img src="boho2.png" alt="Bohemian Style Dress" />
+        <h2>Bohemian Style Dress</h2>
+        <p>Comfort and chic design for relaxed summer days or festivals.</p>
+        <a href="bohemian.html" class="button">Shop Now</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 زن | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

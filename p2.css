@@ -1,0 +1,46 @@
+/*--Nida Ashraf 22008105006--*/
+
+/* General Styles for the Website */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ff5e78;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* More general styles for other elements */
+  .product-gallery {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .category .product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Add other styles as needed */
+  

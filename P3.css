@@ -1,0 +1,204 @@
+/*Nida Ashraf 22008105006*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff5e78;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.product-gallery {
+  padding: 40px;
+  margin-left: 250px;
+  text-align: center;
+}
+
+.product-gallery h1 {
+  font-size: 2.5rem;
+  color: #ff5e78;
+  margin-bottom: 30px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.category .product-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category .product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.category .product-card h2 {
+  color: #ff5e78;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.category .product-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.category .product-card .button {
+  text-decoration: none;
+  background-color: #ff5e78;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.category .product-card .button:hover {
+  background-color: #e53961;
+  transform: scale(1.05);
+}
+
+.two-categories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.two-categories .category {
+  width: 48%;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Hides the checkbox input */
+#menu-toggle,
+#ethnic-toggle,
+#casual-toggle,
+#jewellery-toggle,
+#bohemian-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger div {
+  background-color: #333;
+  height: 4px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Sidebar */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#menu-toggle:checked ~ .side-menu {
+  left: 0;
+}
+
+.side-menu h2 {
+  font-size: 1.4rem;
+  color: #ff5e78;
+  margin-bottom: 15px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.side-menu li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.side-menu li a,
+.side-menu li label {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Sub-menu */
+.sub-menu {
+  display: none;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+#ethnic-toggle:checked + .sub-menu,
+#casual-toggle:checked + .sub-menu,
+#jewellery-toggle:checked + .sub-menu,
+#bohemian-toggle:checked + .sub-menu {
+  display: block;
+}
+
+.side-menu li a:hover {
+  color: #ff5e78;
+}
+
+/* Bohemian Category Specific */
+.side-menu li.bohemian-item label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Specific styling for Bohemian sub-menu */
+#bohemian-toggle:checked + .sub-menu {
+  display: block;
+}
